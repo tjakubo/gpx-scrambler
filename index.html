@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1 id="header">GPX scrambler</h1>
+    <p>
+      <label for="input-file">GPX input:</label>
+      <input type="file" id="input-file" accept=".gpx" />
+    </p>
+    <p>
+      <label for="start-time">Start time:</label>
+      <input type="datetime-local" id="start-time" />
+      <button type="button" id="read-start-time-from-input">Read from selected file</button>
+    </p>
+    <p>
+      <label for="max-deviation-degrees">Max location deviation (degrees lat/lon):</label>
+      <input type="number" id="max-deviation-degrees" min="0" max="0.0005" value="0.00002"/>
+    </p>
+    <p>
+      <label for="remove-extensions">Remove extensions:</label>
+      <input type="checkbox" id="remove-extensions" checked/>
+    </p>
+    <p>
+      <label for="remove-metadata">Remove metadata:</label>
+      <input type="checkbox" id="remove-metadata" checked/>
+    </p>
+    <button id='process' type="button">Process & download</button>
+
+    <script src="index.js"></script>
+  </body>
+</html>
